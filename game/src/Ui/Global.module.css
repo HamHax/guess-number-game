@@ -1,0 +1,56 @@
+
+
+.conteiner{
+    width: 40%;
+    height: 50vh;
+    border: 2px solid  black;
+    margin-left: 30%;
+    margin-top: 10vh;
+}
+
+.text{
+    font-size: 2rem;
+}
+
+.button{
+    width: 60px;
+    height: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: lime;
+    margin-top: 6vh;
+    margin-left: 53.7%;
+}
+
+.inputdesign{
+    width: 10%;
+    height: 5vh;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 30%;
+}
+.inputdesign1{
+    width: 10%;
+    height: 5vh;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 35%;
+}
+.text1{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 40%;
+}
+.divone{
+    margin-top: 5vh;
+}
+.textinput{
+    font-size: 1.5rem;
+}
+
+
+.randomnumber{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-left: 20%;
+}

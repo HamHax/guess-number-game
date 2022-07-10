@@ -5,6 +5,7 @@ import Input from './Components/Input/Input';
 import Text from './Components/Text/Text';
 import Card from './Ui/Card/Card';
 import Wrapper from './Ui/Wrapper/Wrapper';
+import classes from './Ui/Global.module.css'
 
 
 class  App extends Component {
@@ -36,16 +37,19 @@ class  App extends Component {
   render() {
     return (
       <Wrapper>
-         <Text> Your balance is {this.state.balance} </Text>
-         <Card>
-            <Text> guess number </Text>
-            <Input propsRef={this.guessNumRef} type='number'/>
-            <Text> choose bet </Text>
-            <Input propsRef={this.coinRef} type='number'/>
-            <Button onClick={this.playHandler}> play </Button>
+        <Card className={classes.conteiner}>
+         <Text className={classes.text}> Your balance is  </Text>
+         <Text  className={classes.text1}> {this.state.balance}</Text>
+         <Card className={classes.divone}>
+            <Text className={classes.textinput}> Guess number </Text>
+            <Input propsRef={this.guessNumRef} className={classes.inputdesign} placeholder='num' type='number'/>
+            <Text className={classes.textinput}> Choose bet </Text>
+            <Input propsRef={this.coinRef} className={classes.inputdesign1} placeholder='bet' type='number'/>
+            <Button className={classes.button} onClick={this.playHandler}> play </Button>
          </Card>
-         <Card>
-          <Text> {this.state.randomComputerNumber} </Text>
+            <Card>
+          <Text className={classes.randomnumber}> {this.state.randomComputerNumber} </Text>
+            </Card>
          </Card>
       </Wrapper>
     )
