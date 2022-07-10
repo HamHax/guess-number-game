@@ -25,11 +25,11 @@ class  App extends Component {
   playHandler = () => {
     this.setState({
       balance: this.state.balance - this.coinRef.current.value,
-      randomComputerNumber: Math.ceil(Math.random() * 10)
+      randomComputerNumber: Math.ceil(Math.random() * 25)
     })
-    if(this.guessNumRef.current.value == this.state.randomComputerNumber) {
+    if(Number( this.guessNumRef.current.value) === Number(this.state.randomComputerNumber)) {
       this.setState({
-        balance: this.state.balance + (this.coinRef.current.value * 10)
+        balance: this.state.balance + (this.coinRef.current.value * 20)
       })
     }
   }
@@ -41,14 +41,15 @@ class  App extends Component {
          <Text className={classes.text}> Your balance is  </Text>
          <Text  className={classes.text1}> {this.state.balance}</Text>
          <Card className={classes.divone}>
-            <Text className={classes.textinput}> Guess number </Text>
+            <Text className={classes.textinput}> Guess number 0 - 25 </Text>
             <Input propsRef={this.guessNumRef} className={classes.inputdesign} placeholder='num' type='number'/>
             <Text className={classes.textinput}> Choose bet </Text>
             <Input propsRef={this.coinRef} className={classes.inputdesign1} placeholder='bet' type='number'/>
             <Button className={classes.button} onClick={this.playHandler}> play </Button>
          </Card>
             <Card>
-          <Text className={classes.randomnumber}> {this.state.randomComputerNumber} </Text>
+          <Text className={classes.textinput}> Computer number </Text> 
+          <Text className={classes.randomnumber}> {this.state.randomComputerNumber} </Text> 
             </Card>
          </Card>
       </Wrapper>
